@@ -1,0 +1,55 @@
+.header-title {
+    display: grid;
+    grid-template: 1fr auto auto / auto 1fr;
+    width: 75vw;
+    margin: 0 auto;
+}
+
+.header-title .logo {
+    grid-area: 1 / 1 / span 3 / span 1;
+}
+.header-title h1 {
+    font-family: Britannic Bold;
+    grid-area: 2 / 2 / span 1 / span 1;
+}
+
+.header-title p {
+    grid-area: 3 / 2 / span 1 / span 1;
+}
+
+.logo {
+    padding: 0 1em;
+    width: calc(4em + 4vw);
+}
+
+.logo img {
+    width: calc(4em + 4vw);
+}
+
+hr {
+    border: none;
+    border-radius: 40%;
+    background: linear-gradient(90deg, rgba(255,255,255,0.75) 0%, rgba(88,123,127,1) 35%, rgba(88,123,127,1) 65%, rgba(255,255,255,0.75) 100%);
+    height: 0.5em;
+    width: 75vw;
+}
+
+#nav-bar ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#nav-bar ul li {
+    font-size: 1.5em;
+    padding: 0.25em 1em;
+}
+
+
+.nav-link {
+    color: #587b7f;
+    text-decoration: none;
+    font-family: Britannic Bold;
+}
