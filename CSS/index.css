@@ -1,55 +1,110 @@
-.header-title {
-    display: grid;
-    grid-template: 1fr auto auto / auto 1fr;
-    width: 75vw;
-    margin: 0 auto;
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+    font-size: 62.5%;
 }
 
-.header-title .logo {
-    grid-area: 1 / 1 / span 3 / span 1;
-}
-.header-title h1 {
-    font-family: Britannic Bold;
-    grid-area: 2 / 2 / span 1 / span 1;
+body {
+    font-size: 1.6rem;
+    margin: 0;
 }
 
-.header-title p {
-    grid-area: 3 / 2 / span 1 / span 1;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    background: #587b7f;
+    background: rgba(88,123,127, 0.75);
+    border-bottom: 0.4rem solid #FFA347;
 }
 
-.logo {
-    padding: 0 1em;
-    width: calc(4em + 4vw);
-}
-
-.logo img {
-    width: calc(4em + 4vw);
-}
-
-hr {
-    border: none;
-    border-radius: 40%;
-    background: linear-gradient(90deg, rgba(255,255,255,0.75) 0%, rgba(88,123,127,1) 35%, rgba(88,123,127,1) 65%, rgba(255,255,255,0.75) 100%);
-    height: 0.5em;
-    width: 75vw;
-}
-
+/*##########################
+        Nav-Bar Styling
+###########################*/
+/* Adjusts the children of the navbar to stack horizontally and position to the right */
 #nav-bar ul {
     display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
+    justify-content: flex-end;
     list-style: none;
+    margin: 0;
 }
 
-#nav-bar ul li {
-    font-size: 1.5em;
-    padding: 0.25em 1em;
+/* Adjust the spacing around each list item */
+#nav-bar li {
+    padding: 0.2em 0.1em;
+    margin: 0.5em 0.5em;
 }
 
-
-.nav-link {
-    color: #587b7f;
+/* Adust the style of each anchor link */
+#nav-bar a {
+    /* Position: relative will make the hover line appear under each anchor,
+     instead of spanning the entire navbar */
+    position: relative;
+    color: #F5F5F5;
     text-decoration: none;
-    font-family: Britannic Bold;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: 'Abril Fatface', cursive;
+}
+
+/* Styles the hover line for the anchor */
+#nav-bar a:after {
+    /* Position: absolute needed to adjust the position of the hover line. 
+    Otherwise it will appear to the right of the anchor */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #F5F5F5;
+    height: 0.1rem;
+}
+
+/* Adjusts the size of the hover line when hovering over the anchor */
+#nav-bar a:hover:after {
+    width: 100%;
+}
+
+/* Applies the transition to the anchor */
+#nav-bar a, #nav-bar a:after, #nav-bar a:before {
+    transition: all .5s;
+}
+
+
+/*##########################
+        Header Styling
+###########################*/
+
+/* Layout for the title and logo */
+#header-container {
+    display: flex;
+    align-items: flex-end;
+}
+
+#header-container img {
+    /* width: 3.5em; */
+    width: 2.5em;
+    height: auto;
+    margin: 0.5em;
+}
+
+#title h1{
+    font-family: 'Abril Fatface', cursive;
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: #F5F5F5;
+    margin: 0;
+}
+
+#title p {
+    font-family: 'Ubuntu', sans-serif;
+    color: #F5F5F5;    
+    margin: 0;
+    margin-bottom: 0.5em;
 }
