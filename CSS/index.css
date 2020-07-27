@@ -8,6 +8,7 @@
 body {
     font-size: 1.6rem;
     margin: 0;
+    position: relative;
 }
 
 header {
@@ -15,10 +16,16 @@ header {
     justify-content: space-between;
     align-items: center;
     position: fixed;
+    top: 0;
     width: 100%;
     background: #587b7f;
-    background: rgba(88,123,127, 0.75);
+    /* background: rgba(88,123,127, 0.75); */
     border-bottom: 0.4rem solid #FFA347;
+    box-shadow: 0 0.1em 1em rgba(0, 0, 0, 0.5);
+}
+
+main {
+    margin-top: 6em;
 }
 
 /*##########################
