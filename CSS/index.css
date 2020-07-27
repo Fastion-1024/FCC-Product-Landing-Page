@@ -3,6 +3,18 @@
 
 :root {
     font-size: 62.5%;
+
+    /* CSS Variables */
+    --font-header: 'Abril Fatface', cursive;
+    --font-content: 'Ubuntu', sans-serif;
+    --color-main: #51777C;
+    --color-secondary: #FFA347;
+    --color-light-text: #F5F5F5;
+    --color-dark-text: #3C3C3C;
+}
+
+html {
+    font-family: var(--font-content);
 }
 
 body {
@@ -18,9 +30,9 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: #587b7f;
+    background: var(--color-main);
     /* background: rgba(88,123,127, 0.75); */
-    border-bottom: 0.4rem solid #FFA347;
+    border-bottom: 0.4rem solid var(--color-secondary);
     box-shadow: 0 0.1em 1em rgba(0, 0, 0, 0.5);
 }
 
@@ -50,11 +62,11 @@ main {
     /* Position: relative will make the hover line appear under each anchor,
      instead of spanning the entire navbar */
     position: relative;
-    color: #F5F5F5;
+    color: var(--color-light-text);
     text-decoration: none;
     font-size: 2rem;
     text-transform: uppercase;
-    font-family: 'Abril Fatface', cursive;
+    font-family: var(--font-header);
 }
 
 /* Styles the hover line for the anchor */
@@ -69,7 +81,7 @@ main {
     width: 0%;
     content: '.';
     color: transparent;
-    background: #F5F5F5;
+    background: var(--color-light-text);
     height: 0.1rem;
 }
 
@@ -102,16 +114,76 @@ main {
 }
 
 #title h1{
-    font-family: 'Abril Fatface', cursive;
+    font-family: var(--font-header);
     font-size: 4rem;
     text-transform: uppercase;
-    color: #F5F5F5;
+    color: var(--color-light-text);
     margin: 0;
 }
 
 #title p {
-    font-family: 'Ubuntu', sans-serif;
-    color: #F5F5F5;    
+    color: var(--color-light-text);   
     margin: 0;
     margin-bottom: 0.5em;
+}
+
+/*##########################
+        Contact Styling
+###########################*/
+
+#contact {
+    padding: 5em 1em 1em 1em;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.8rem;
+    font-weight: 900;
+    font-family: var(--font-header);
+}
+
+#contact p {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+#email {
+    font-size: 2rem;
+    display: block;
+    min-width: 10em;
+    width: 100%;
+    max-width: 20em;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 0.5rem 1rem;
+    border: 0.1em solid var(--color-main);
+    border-radius: 0.25em;
+} 
+
+#email:focus {
+    outline-offset: 0.1em;
+    border: 0.15em solid var(--color-main);
+}
+
+#submit {
+    margin-top: 1em;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 0.5em 1em;
+
+    border: 0.15em solid var(--color-main);
+    border-radius: 0.4em;
+    background-color: var(--color-secondary);
+    color: var(--color-dark-text);
+
+    transition-property: color, background-color;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-out;
+}
+
+#submit:hover, #submit:focus {
+    color: var(--color-light-text);
+    background-color: #AD5B0E;
+    
 }
