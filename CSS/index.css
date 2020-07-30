@@ -283,3 +283,59 @@ h3 {
 #features h3 {
     color: var(--color-main);
 }
+
+/*##########################
+        Features Styling
+###########################*/
+
+#pricing h2 {
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    border: 0.25em solid var(--color-secondary);
+    background-color: var(--color-main);
+    width: 20em;
+    min-height: 25em;
+    margin: 0 2em;
+    box-shadow: 0.4em 0.4em 1em rgba(0, 0, 0, 0.8);
+    box-shadow: 0.8em 0.8em 2em rgba(0, 0, 0, 0.5);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 'header' 'content' 'pricing';
+}
+
+.card h3 {
+    text-align: center;
+    color: var(--color-light-text);
+    border-bottom: 0.1em solid var(--color-secondary);
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 0.4em 0;
+    grid-area: header;
+}
+
+.card ul {
+    margin: 1em 0;
+    grid-area: content;
+}
+
+.card ul li {
+    list-style: circle;    
+    font-size: 1.8rem;
+    color: var(--color-light-text);
+    padding-bottom: 1em;
+}
+
+.card .tier-pricing {
+    font-size: 2.4rem;
+    font-weight: 900;    
+    color: var(--color-secondary);
+    grid-area: pricing;
+    justify-self: center;
+}
