@@ -285,7 +285,7 @@ h3 {
 }
 
 /*##########################
-        Features Styling
+        Pricing Styling
 ###########################*/
 
 #pricing h2 {
@@ -349,3 +349,39 @@ h3 {
     justify-self: center;
 }
 
+/*##########################
+        Footer Styling
+###########################*/
+footer {
+    background-color: var(--color-main);
+    border-top: 0.2em solid var(--color-secondary);
+}
+
+footer span {
+    display: block;
+    text-align: right;
+    margin: 0 1em;
+    padding-bottom: 0.5em;
+    color: var(--color-light-text);
+}
+
+footer ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0 0.5em 0 0;
+    padding: 0;
+}
+
+footer li {
+    margin: 0.5em 0.5em;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: hsl(30, 100%, 54%);
+}
