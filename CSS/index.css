@@ -308,6 +308,13 @@ h3 {
     display: grid;
     grid-template-rows: auto 1fr auto;
     grid-template-areas: 'header' 'content' 'pricing';
+    cursor: pointer;    
+}
+
+.card:hover {
+    background-color: hsl(187, 31%, 30%);
+    border: 0.25em solid hsl(30, 100%, 54%);
+    box-shadow: 0.4em 0.4em 1em rgba(0, 0, 0, 0.8);
 }
 
 .card h3 {
@@ -315,14 +322,16 @@ h3 {
     color: var(--color-light-text);
     border-bottom: 0.1em solid var(--color-secondary);
     max-width: 80%;
-    margin: 0 auto;
+    margin: 0.4em auto;
     padding: 0.4em 0;
     grid-area: header;
 }
 
 .card ul {
     margin: 1em 0;
+    padding-left: 2em;
     grid-area: content;
+    text-align: left;
 }
 
 .card ul li {
@@ -339,3 +348,4 @@ h3 {
     grid-area: pricing;
     justify-self: center;
 }
+
