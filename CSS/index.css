@@ -39,7 +39,7 @@ main {
 }
 
 section {
-    margin-bottom: 6em;
+    margin-bottom: 5em;
 }
 
 h2 {
@@ -424,7 +424,8 @@ footer a:hover {
     }
 
     #features .container {
-        width: 90vw;
+        width: 100vw;
+        margin: 0;
     }
 
     #pricing .card-container {
