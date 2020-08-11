@@ -5,8 +5,11 @@
     /* CSS Variables */
     --font-header: 'Abril Fatface', cursive;
     --font-content: 'Ubuntu', sans-serif;
-    --color-main: #51777C;
+    --color-main: #355f64;
+    --color-main-highlight: #3e6f75;
     --color-secondary: #FFA347;
+    --color-secondary-highlight: hsl(30, 100%, 70%);
+    --color-secondary-dark: #ff8a14;
     --color-light-text: #F5F5F5;
     --color-dark-text: #3C3C3C;
 }
@@ -32,6 +35,7 @@ header {
     /* background: rgba(88,123,127, 0.75); */
     border-bottom: 0.4rem solid var(--color-secondary);
     box-shadow: 0 0.1em 1em rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
 main {
@@ -309,15 +313,23 @@ h3 {
     grid-template-rows: auto 1fr auto;
     grid-template-areas: 'header' 'content' 'pricing';
     cursor: pointer;    
+    position: relative;
+    transition: scale 200ms linear;
 }
 
 .card:hover {
-    background-color: hsl(187, 31%, 30%);
-    border: 0.25em solid hsl(30, 100%, 54%);
+    background-color: var(--color-main-highlight);
+    border: 0.25em solid var(--color-secondary-highlight);
+}
+
+.card-active {
+    border: 0.25em solid var(--color-secondary-dark);
     box-shadow: 0.4em 0.4em 1em rgba(0, 0, 0, 0.8);
+    scale: 1.05;
 }
 
 .card h3 {
+    font-size: 2.4rem;
     text-align: center;
     color: var(--color-light-text);
     border-bottom: 0.1em solid var(--color-secondary);
@@ -325,6 +337,31 @@ h3 {
     margin: 0.4em auto;
     padding: 0.4em 0;
     grid-area: header;
+}
+
+.card label {
+    position: absolute;
+    width: 100%;
+    height: 100%;    
+}
+
+.card input[type=radio] {
+    display: none;
+}
+
+.subscribe-button {
+    display: block;
+    margin: 2em auto 0 auto;
+    padding: 0.5em 10em;
+    background-color: var(--color-secondary);
+    color: var(--color-dark-text);
+    font-size: 2.4rem;
+    border-radius: 1em;
+    border: none;
+}
+
+.subscribe-button:hover {
+    background-color: var(--color-secondary-highlight);
 }
 
 .card ul {
@@ -383,7 +420,7 @@ footer a {
 }
 
 footer a:hover {
-    color: hsl(30, 100%, 54%);
+    color: var(--color-secondary-highlight)
 }
 
 @media only screen and (max-width: 1024px) {
@@ -435,6 +472,10 @@ footer a:hover {
 
     #pricing .card {
         margin: 2em 0 0 0;
+    }
+
+    #pricing .subscribe-button {
+        padding: 0.5em 5em;
     }
 
     footer ul {
